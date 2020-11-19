@@ -2,6 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import { fetchFruits } from '../actions'
+import { fetchQuiz } from '../apis/fruits'
+import QuizList from './QuizList'
+
 
 export class App extends React.Component {
   state = {
@@ -10,6 +13,8 @@ export class App extends React.Component {
 
   componentDidMount () {
     this.props.dispatch(fetchFruits())
+    
+    this.props.dispatch(fetchQuiz())
   }
 
   render () {
