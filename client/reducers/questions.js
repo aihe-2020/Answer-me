@@ -1,11 +1,11 @@
-import { SET_QUIZ } from '../actions'
+import { SET_QUESTIONS } from '../actions'
 
 const initialState = []
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_QUIZ:
-      return action.quiz
+    case SET_QUESTIONS:
+      return action.quizData
     default:
       return state
   }

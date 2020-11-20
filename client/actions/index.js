@@ -1,20 +1,23 @@
-import { getFruits } from '../apis/fruits'
+import request from 'superagent'
+import { getQuiz } from '../apis/fruits'
 
-export const SET_FRUITS = 'SET_FRUITS'
+export const SET_QUESTIONS = 'SET_QUESTIONS'
 
-export function setFruits (fruits) {
+export function setQuiz (quizData) {
   return {
-    type: SET_FRUITS,
-    fruits
+    type: SET_QUESTIONS,
+    quizData
   }
 }
 
-export function fetchFruits () {
+export function fetchQuiz () {
+
   return dispatch => {
-    return getFruits()
-      .then(fruits => {
-        dispatch(setFruits(fruits))
+    return getQuiz()
+      .then(quizData => {
+        dispatch(setQuiz(quizData))
         return null
       })
   }
 }
+
