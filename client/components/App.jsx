@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { fetchQuiz } from '../actions'
+import { fetchQuiz } from '../actions/index'
 
 
 
@@ -24,11 +24,12 @@ export class App extends React.Component {
 
   render () {
     return (
-      <div className='app'>
+      <div>
         <h1>Answer Me!</h1>
         <ul> 
-           {this.props.quiz.map((question, index) => (
+           {this.props.quizs.map((question, index) => (
             <li key={index}>{question.question} 
+         
              {this.answersArray(question.correct_answer, question.incorrect_answers)
              
              }
@@ -45,7 +46,7 @@ export class App extends React.Component {
 
 function mapStateToProps (globalState) {
   return {
-    quiz: globalState.questions
+    quizs: globalState.questions
   }
 }
 

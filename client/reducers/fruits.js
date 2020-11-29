@@ -2,7 +2,7 @@ import { SET_QUIZ } from '../actions'
 
 const initialState = []
 
-const reducer = (state = initialState, action) => {
+const fruits = (state = initialState, action) => {
   switch (action.type) {
     case SET_QUIZ:
       return action.quiz
@@ -11,4 +11,4 @@ const reducer = (state = initialState, action) => {
   }
 }
 
-export default reducer
+export default fruits
