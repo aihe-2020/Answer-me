@@ -10,8 +10,8 @@ describe('questions reducer' ,()=> {
         })
 
       test ( 'SET_QUESTIONS overwrite init state of questions' ,()=> {
-           const initialQuizs =[{incorrect_answers:'wombat'},{incorrect_answers:'mongoose'}]
-           const newQuiz = [{incorrect_answers:'apple'},{incorrect_answers:'peter pen'}]
+           const initialQuizs =[{question:'wombat'},{question:'mongoose'}]
+           const newQuiz = [{question:'apple'},{question:'peter pen'}]
            const action = setQuiz(newQuiz)
            const state = questions(initialQuizs,action) 
 

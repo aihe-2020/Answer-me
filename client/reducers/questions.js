@@ -5,7 +5,7 @@ const initialState = []
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_QUESTIONS:
-      return action.quizData.results
+      return action.quizData
     default:
       return state
   }

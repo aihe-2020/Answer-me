@@ -12,7 +12,7 @@ export const SET_ERROR = 'SET_ERROR'
 export function setQuiz (quizData) {
   return {
     type: SET_QUESTIONS,
-    quizData
+    quizData:quizData.results
   }
 }
 
